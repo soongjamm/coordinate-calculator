@@ -1,13 +1,15 @@
 package com.soongjamm.helper;
 
+import java.util.Objects;
+
 public class Power extends Number {
 
     private final Number base;
     private final Number exponent;
 
     public Power(Number base, Number exponent) {
-        this.base = base;
-        this.exponent = exponent;
+        this.base = Objects.requireNonNull(base);
+        this.exponent = Objects.requireNonNull(exponent);
     }
 
     @Override
