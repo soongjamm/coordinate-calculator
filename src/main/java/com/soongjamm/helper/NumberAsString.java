@@ -17,7 +17,7 @@ public class NumberAsString extends Number {
 
     @Override
     public long longValue() {
-        throw new UnsupportedOperationException("longValue()는 지원하지 않습니다.");
+        return Long.parseLong(this.value);
     }
 
     @Override

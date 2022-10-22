@@ -1,19 +1,29 @@
-package com.soongjamm.helper;
+package com.soongjamm.coordinate;
 
+import com.soongjamm.helper.NumberRange;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class LimitedNumberTest {
+class LimitedPointTest {
+
+    @ParameterizedTest
+    @ValueSource(ints = {-1, 25})
+    void limited_range_fail_check_negative_or_gte_25(int value) {
+        NumberRange numberRange = new NumberRange(0, 24);
+
+        assertThrows(IllegalArgumentException.class, () -> new LimitedPoint(numberRange, value));
+    }
 
     @ParameterizedTest
     @CsvSource(value = {"-1, 1, -1", "-1, 1, 1", "-1, 1, 0"})
     void min_max_range_test(int min, int max, int value) {
         NumberRange numberRange = new NumberRange(min, max);
 
-        assertDoesNotThrow(() -> new LimitedNumber(numberRange, value));
+        assertDoesNotThrow(() -> new LimitedPoint(numberRange, value));
     }
 
     @ParameterizedTest
@@ -21,7 +31,6 @@ class LimitedNumberTest {
     void min_max_range_fail_test(int min, int max, int value) {
         NumberRange numberRange = new NumberRange(min, max);
 
-        assertThrows(IllegalArgumentException.class, () -> new LimitedNumber(numberRange, value));
+        assertThrows(IllegalArgumentException.class, () -> new LimitedPoint(numberRange, value));
     }
-
 }
