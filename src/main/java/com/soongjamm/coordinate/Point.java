@@ -10,6 +10,10 @@ public class Point {
         this.value = value;
     }
 
+    public Number value() {
+        return value.intValue();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -20,5 +24,12 @@ public class Point {
     @Override
     public int hashCode() {
         return Objects.hash(value);
+    }
+
+    @Override
+    public String toString() {
+        return "Point{" +
+                "value=" + value +
+                '}';
     }
 }
