@@ -13,4 +13,12 @@ class CoordinateTest {
         assertThat(sut.x().value()).isEqualTo(1);
         assertThat(sut.y().value()).isEqualTo(2);
     }
+
+    @Test
+    void create_coordinate_with_point() {
+        Coordinate sut = new Coordinate(new DefaultPoint(1), new DefaultPoint(2));
+
+        assertThat(sut.x()).isEqualTo(new DefaultPoint(1));
+        assertThat(sut.y()).isEqualTo(new DefaultPoint(2));
+    }
 }
