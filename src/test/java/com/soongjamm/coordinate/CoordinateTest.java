@@ -16,9 +16,9 @@ class CoordinateTest {
 
     @Test
     void create_coordinate_with_point() {
-        Coordinate sut = new Coordinate(new DefaultPoint(1), new DefaultPoint(2));
+        Coordinate sut = new Coordinate(new DefaultPosition(1), new DefaultPosition(2));
 
-        assertThat(sut.x()).isEqualTo(new DefaultPoint(1));
-        assertThat(sut.y()).isEqualTo(new DefaultPoint(2));
+        assertThat(sut.x()).isEqualTo(new DefaultPosition(1));
+        assertThat(sut.y()).isEqualTo(new DefaultPosition(2));
     }
 }

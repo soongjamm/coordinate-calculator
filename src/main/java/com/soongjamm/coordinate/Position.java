@@ -1,6 +1,6 @@
 package com.soongjamm.coordinate;
 
-public interface Point {
+public interface Position {
 
     Number value();
 }

@@ -2,7 +2,7 @@ package com.soongjamm.coordinate;
 
 import java.util.Objects;
 
-public record DefaultPoint(Number value) implements Point {
+public record DefaultPosition(Number value) implements Position {
 
     public Number value() {
         return value.intValue();
@@ -11,7 +11,7 @@ public record DefaultPoint(Number value) implements Point {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof DefaultPoint defaultPoint)) return false;
+        if (!(o instanceof DefaultPosition defaultPoint)) return false;
         return Objects.equals(value, defaultPoint.value);
     }
 

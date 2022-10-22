@@ -2,11 +2,11 @@ package com.soongjamm.coordinate;
 
 import com.soongjamm.helper.NumberRange;
 
-public class LimitedPoint implements Point {
+public class LimitedPosition implements Position {
 
     private final Number value;
 
-    public LimitedPoint(NumberRange numberRange, Number value) {
+    public LimitedPosition(NumberRange numberRange, Number value) {
         if (not(numberRange.contains(value))) {
             throw new IllegalArgumentException();
         }

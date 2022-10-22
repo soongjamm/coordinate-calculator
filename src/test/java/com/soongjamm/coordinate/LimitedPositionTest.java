@@ -8,14 +8,14 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class LimitedPointTest {
+class LimitedPositionTest {
 
     @ParameterizedTest
     @ValueSource(ints = {-1, 25})
     void limited_range_fail_check_negative_or_gte_25(int value) {
         NumberRange numberRange = new NumberRange(0, 24);
 
-        assertThrows(IllegalArgumentException.class, () -> new LimitedPoint(numberRange, value));
+        assertThrows(IllegalArgumentException.class, () -> new LimitedPosition(numberRange, value));
     }
 
     @ParameterizedTest
@@ -23,7 +23,7 @@ class LimitedPointTest {
     void min_max_range_test(int min, int max, int value) {
         NumberRange numberRange = new NumberRange(min, max);
 
-        assertDoesNotThrow(() -> new LimitedPoint(numberRange, value));
+        assertDoesNotThrow(() -> new LimitedPosition(numberRange, value));
     }
 
     @ParameterizedTest
@@ -31,6 +31,6 @@ class LimitedPointTest {
     void min_max_range_fail_test(int min, int max, int value) {
         NumberRange numberRange = new NumberRange(min, max);
 
-        assertThrows(IllegalArgumentException.class, () -> new LimitedPoint(numberRange, value));
+        assertThrows(IllegalArgumentException.class, () -> new LimitedPosition(numberRange, value));
     }
 }
