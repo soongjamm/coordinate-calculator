@@ -5,12 +5,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-class PointTest {
+class DefaultPointTest {
 
     @ParameterizedTest
     @ValueSource(ints = {0, 10, 15, 20, 24})
     void create_point(int value) {
-        assertDoesNotThrow(() -> new Point(value));
+        assertDoesNotThrow(() -> new DefaultPoint(value));
     }
 
 }
