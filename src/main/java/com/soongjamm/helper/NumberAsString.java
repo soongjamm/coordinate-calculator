@@ -27,7 +27,7 @@ public class NumberAsString extends Number {
 
     @Override
     public double doubleValue() {
-        throw new UnsupportedOperationException("doubleValue()는 지원하지 않습니다.");
+        return Double.parseDouble(this.value);
     }
 
     @Override
