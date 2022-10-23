@@ -10,7 +10,7 @@ public class SquareRoot extends Number {
 
     @Override
     public int intValue() {
-        throw new UnsupportedOperationException("intValue()는 지원하지 않습니다.");
+        return (int) Math.sqrt(value.intValue());
     }
 
     @Override

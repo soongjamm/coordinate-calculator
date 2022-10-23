@@ -1,5 +1,6 @@
-package com.soongjamm.coordinate;
+package com.soongjamm.figure;
 
+import com.soongjamm.coordinate.Coordinate;
 import com.soongjamm.number.Add;
 import com.soongjamm.number.Difference;
 import com.soongjamm.number.Power;

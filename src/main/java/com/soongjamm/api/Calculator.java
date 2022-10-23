@@ -1,7 +1,7 @@
 package com.soongjamm.api;
 
 import com.soongjamm.coordinate.Coordinate;
-import com.soongjamm.coordinate.Line;
+import com.soongjamm.figure.Line;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
