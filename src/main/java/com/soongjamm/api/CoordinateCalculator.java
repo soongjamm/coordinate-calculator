@@ -1,7 +1,8 @@
 package com.soongjamm.api;
 
+import com.soongjamm.figure.Figure;
+import com.soongjamm.figure.Figures;
 import com.soongjamm.figure.Point;
-import com.soongjamm.figure.Line;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,19 +12,18 @@ public class CoordinateCalculator {
 
     private final Logger logger;
     private final Input input;
+    private final Figures figures;
 
     public CoordinateCalculator(Input input) {
         this.logger = LoggerFactory.getLogger(CoordinateCalculator.class);
         this.input = input;
+        this.figures = new Figures();
     }
 
     public void start() {
         logger.info("좌표를 입력하세요.");
         List<Point> points = new CoordinateListAsString(input.input()).parse();
-        Line result = null;
-        if (points.size() == 2) {
-            result = new Line(points.get(0), points.get(1));
-        }
-        logger.info("두 점 사이의 거리는 {}", result.length().doubleValue());
+        Figure figure = figures.make(points);
+        logger.info("{}", figure);
     }
 }

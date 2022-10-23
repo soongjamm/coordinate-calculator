@@ -40,4 +40,9 @@ public class Rectangle implements Quadrangle {
     public int hashCode() {
         return Objects.hash(points);
     }
+
+    @Override
+    public String toString() {
+        return "사각형의 면적은 " + area().doubleValue();
+    }
 }

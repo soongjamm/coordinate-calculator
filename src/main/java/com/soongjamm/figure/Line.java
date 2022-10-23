@@ -15,4 +15,9 @@ public record Line(Point first, Point second) implements Figure {
                                 new Power(new Difference(first.y().value(), second.y().value()), 2)
                         ));
     }
+
+    @Override
+    public String toString() {
+        return "두 점 사이의 거리는 " + length().doubleValue();
+    }
 }
