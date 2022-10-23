@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.offset;
 
-class QuadrangleRootTest {
+class SquareRootTest {
 
     @ParameterizedTest
     @CsvSource({
