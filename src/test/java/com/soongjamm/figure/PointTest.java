@@ -1,14 +1,14 @@
-package com.soongjamm.coordinate;
+package com.soongjamm.figure;
 
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class CoordinateTest {
+class PointTest {
 
     @Test
     void create_coordinate_with_string() {
-        Coordinate sut = new Coordinate("1", "2");
+        Point sut = new Point("1", "2");
 
         assertThat(sut.x().value()).isEqualTo(1);
         assertThat(sut.y().value()).isEqualTo(2);
@@ -16,7 +16,7 @@ class CoordinateTest {
 
     @Test
     void create_coordinate_with_point() {
-        Coordinate sut = new Coordinate(new DefaultPosition(1), new DefaultPosition(2));
+        Point sut = new Point(new DefaultPosition(1), new DefaultPosition(2));
 
         assertThat(sut.x()).isEqualTo(new DefaultPosition(1));
         assertThat(sut.y()).isEqualTo(new DefaultPosition(2));

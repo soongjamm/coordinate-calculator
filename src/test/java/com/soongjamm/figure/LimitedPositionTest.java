@@ -1,4 +1,4 @@
-package com.soongjamm.coordinate;
+package com.soongjamm.figure;
 
 import com.soongjamm.number.NumberRange;
 import org.junit.jupiter.params.ParameterizedTest;

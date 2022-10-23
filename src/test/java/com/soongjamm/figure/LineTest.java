@@ -1,6 +1,5 @@
-package com.soongjamm.coordinate;
+package com.soongjamm.figure;
 
-import com.soongjamm.figure.Line;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -11,17 +10,17 @@ class LineTest {
 
     @Test
     void create_line() {
-        Coordinate coordinate1 = new Coordinate("1", "1");
-        Coordinate coordinate2 = new Coordinate("2", "2");
+        Point point1 = new Point("1", "1");
+        Point point2 = new Point("2", "2");
 
-        assertDoesNotThrow(() -> new Line(coordinate1, coordinate2));
+        assertDoesNotThrow(() -> new Line(point1, point2));
     }
 
     @Test
     void calculate_length() {
-        Coordinate coordinate1 = new Coordinate("10", "10");
-        Coordinate coordinate2 = new Coordinate("14", "15");
-        Line sut = new Line(coordinate1, coordinate2);
+        Point point1 = new Point("10", "10");
+        Point point2 = new Point("14", "15");
+        Line sut = new Line(point1, point2);
 
         Number result = sut.length();
 

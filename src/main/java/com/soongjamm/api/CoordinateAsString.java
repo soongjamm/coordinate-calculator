@@ -1,11 +1,11 @@
 package com.soongjamm.api;
 
-import com.soongjamm.coordinate.Coordinate;
+import com.soongjamm.figure.Point;
 
 record CoordinateAsString(String value) {
 
-    Coordinate parse() {
+    Point parse() {
         String[] positions = value.split(",");
-        return new Coordinate(positions[0].replace("(", "").trim(), positions[1].replace(")", "").trim());
+        return new Point(positions[0].replace("(", "").trim(), positions[1].replace(")", "").trim());
     }
 }

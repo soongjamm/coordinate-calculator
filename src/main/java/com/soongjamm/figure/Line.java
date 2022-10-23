@@ -1,12 +1,11 @@
 package com.soongjamm.figure;
 
-import com.soongjamm.coordinate.Coordinate;
 import com.soongjamm.number.Add;
 import com.soongjamm.number.Difference;
 import com.soongjamm.number.Power;
 import com.soongjamm.number.SquareRoot;
 
-public record Line(Coordinate first, Coordinate second) {
+public record Line(Point first, Point second) {
 
     public Number length() {
         return

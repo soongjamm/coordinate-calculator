@@ -1,20 +1,20 @@
-package com.soongjamm.coordinate;
+package com.soongjamm.figure;
 
 import com.soongjamm.number.NumberAsString;
 import com.soongjamm.number.NumberRange;
 
 import java.util.Objects;
 
-public class Coordinate {
+public class Point {
     private final Position x;
     private final Position y;
 
-    public Coordinate(Position x, Position y) {
+    public Point(Position x, Position y) {
         this.x = x;
         this.y = y;
     }
 
-    public Coordinate(String x, String y) {
+    public Point(String x, String y) {
         this(
                 new LimitedPosition(new NumberRange(0, 24), new NumberAsString(x)),
                 new LimitedPosition(new NumberRange(0, 24), new NumberAsString(y))
@@ -32,7 +32,7 @@ public class Coordinate {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Coordinate that)) return false;
+        if (!(o instanceof Point that)) return false;
         return Objects.equals(x, that.x) && Objects.equals(y, that.y);
     }
 

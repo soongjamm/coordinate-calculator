@@ -1,6 +1,5 @@
 package com.soongjamm.figure;
 
-import com.soongjamm.coordinate.Coordinate;
 import com.soongjamm.number.Multiply;
 
 import java.util.ArrayList;
@@ -11,15 +10,15 @@ import java.util.function.Predicate;
 
 public class Rectangle {
 
-    private final Set<Coordinate> coordinates = new HashSet<>(4);
+    private final Set<Point> points = new HashSet<>(4);
 
-    public Rectangle(Coordinate c1, Coordinate c2, Coordinate c3, Coordinate c4) {
-        this.coordinates.addAll(Set.of(c1, c2, c3, c4));
+    public Rectangle(Point c1, Point c2, Point c3, Point c4) {
+        this.points.addAll(Set.of(c1, c2, c3, c4));
     }
 
     public Number area() {
-        List<Coordinate> copied = new ArrayList<>(coordinates);
-        Coordinate base = copied.remove(0);
+        List<Point> copied = new ArrayList<>(points);
+        Point base = copied.remove(0);
         copied.removeIf(oppositeSideCoordinate(base));
 
         return new Multiply(
@@ -28,7 +27,7 @@ public class Rectangle {
         );
     }
 
-    private Predicate<Coordinate> oppositeSideCoordinate(Coordinate one) {
+    private Predicate<Point> oppositeSideCoordinate(Point one) {
         return each -> !one.x().equals(each.x()) && !one.y().equals(each.y());
     }
 }

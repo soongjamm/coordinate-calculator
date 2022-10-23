@@ -1,4 +1,4 @@
-package com.soongjamm.coordinate;
+package com.soongjamm.figure;
 
 public interface Position {
 
