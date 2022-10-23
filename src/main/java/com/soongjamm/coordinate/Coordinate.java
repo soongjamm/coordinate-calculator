@@ -1,7 +1,7 @@
 package com.soongjamm.coordinate;
 
-import com.soongjamm.helper.NumberAsString;
-import com.soongjamm.helper.NumberRange;
+import com.soongjamm.number.NumberAsString;
+import com.soongjamm.number.NumberRange;
 
 public class Coordinate {
     private final Position x;

@@ -1,6 +1,6 @@
 package com.soongjamm.coordinate;
 
-import com.soongjamm.helper.NumberRange;
+import com.soongjamm.number.NumberRange;
 
 public class LimitedPosition implements Position {
 

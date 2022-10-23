@@ -1,9 +1,9 @@
 package com.soongjamm.coordinate;
 
-import com.soongjamm.helper.Add;
-import com.soongjamm.helper.Difference;
-import com.soongjamm.helper.Power;
-import com.soongjamm.helper.SquareRoot;
+import com.soongjamm.number.Add;
+import com.soongjamm.number.Difference;
+import com.soongjamm.number.Power;
+import com.soongjamm.number.SquareRoot;
 
 public record Line(Coordinate first, Coordinate second) {
 

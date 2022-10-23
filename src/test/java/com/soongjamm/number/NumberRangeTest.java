@@ -1,4 +1,4 @@
-package com.soongjamm.helper;
+package com.soongjamm.number;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;

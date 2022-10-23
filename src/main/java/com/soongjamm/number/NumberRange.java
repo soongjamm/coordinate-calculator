@@ -1,4 +1,4 @@
-package com.soongjamm.helper;
+package com.soongjamm.number;
 
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
 package com.soongjamm.coordinate;
 
-import com.soongjamm.helper.NumberRange;
+import com.soongjamm.number.NumberRange;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
