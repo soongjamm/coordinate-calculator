@@ -2,6 +2,8 @@ package com.soongjamm.figure;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Set;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 class RectangleTest {
@@ -13,7 +15,7 @@ class RectangleTest {
         Point c3 = new Point("22", "18");
         Point c4 = new Point("10", "18");
 
-        Rectangle sut = new Rectangle(c1, c2, c3, c4);
+        Rectangle sut = new Rectangle(Set.of(c1, c2, c3, c4));
 
         assertThat(sut.area().intValue()).isEqualTo(96);
     }

@@ -2,20 +2,18 @@ package com.soongjamm.figure;
 
 import com.soongjamm.number.Multiply;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Predicate;
 
-public class Rectangle {
+public class Rectangle implements Quadrangle {
 
     private final Set<Point> points = new HashSet<>(4);
 
-    public Rectangle(Point c1, Point c2, Point c3, Point c4) {
-        this.points.addAll(Set.of(c1, c2, c3, c4));
+    public Rectangle(Collection<Point> points) {
+        this.points.addAll(points);
     }
 
+    @Override
     public Number area() {
         List<Point> copied = new ArrayList<>(points);
         Point base = copied.remove(0);
@@ -29,5 +27,17 @@ public class Rectangle {
 
     private Predicate<Point> oppositeSideCoordinate(Point one) {
         return each -> !one.x().equals(each.x()) && !one.y().equals(each.y());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Rectangle rectangle)) return false;
+        return Objects.equals(points, rectangle.points);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(points);
     }
 }

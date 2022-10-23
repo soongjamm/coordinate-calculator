@@ -5,7 +5,7 @@ import com.soongjamm.number.Difference;
 import com.soongjamm.number.Power;
 import com.soongjamm.number.SquareRoot;
 
-public record Line(Point first, Point second) {
+public record Line(Point first, Point second) implements Figure {
 
     public Number length() {
         return
